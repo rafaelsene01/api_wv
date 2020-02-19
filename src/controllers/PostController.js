@@ -24,6 +24,6 @@ module.exports = {
 
     req.io.emit("delete", text);
 
-    return res.status(204).json();
+    return res.status(204).json({ _id });
   }
 };
