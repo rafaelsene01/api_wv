@@ -18,4 +18,4 @@ COPY . .
 # set EnvKey environment variables before running the process
 CMD eval $(envkey-source)
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "dev" ]
