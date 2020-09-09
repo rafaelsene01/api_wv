@@ -9,10 +9,10 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 mongoose.connect(
-  "mongodb+srv://rafaelsene:QD6DxwAhXYsNLo24@cluster0-q8ceh.gcp.mongodb.net/apiWV",
+  "mongodb+srv://api-wv:MYxjITtX1mbZYohs@cluster0.q8ceh.gcp.mongodb.net/apiWV?retryWrites=true&w=majority",
   {
     useUnifiedTopology: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
   }
 );
 
@@ -40,6 +40,6 @@ function normalizaPort(val) {
   return false;
 }
 
-server.listen(port, function() {
+server.listen(port, function () {
   console.log(`app listening on http://localhost:${port}`);
 });
